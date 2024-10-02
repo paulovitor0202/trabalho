@@ -5,7 +5,7 @@
 }
 
 body{
-    background: url(img/bg-desktop.webp);
+    background: url(bg-desktop.webp);
     font-family: Bai Jamjuree;
 }
 
@@ -38,6 +38,8 @@ footer p{
     background-color: var(--card-front-color);
     text-align: center;
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
 }
 
 .cartao__conteudo h3{
@@ -49,12 +51,43 @@ position: absolute;
 margin: 0.6rem;
 border-radius: 0.6rem;
 font-size: 1vw;
+backface-visibility: hidden;
 }
 
 .cartao__conteudo__pergunta{
 color: var(--text-color);
+font-weight: 500;
 }
+
+.cartao:hover .cartao__conteudo{
+transform: rotateY(180deg);
+
+}
+
+.cartao__conteudo__pergunta,
+.cartao__conteudo__reposta {
+    backface-visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cartao__conteudo__reposta{
     color: var(--card-back-color);
+    font-weight: 700;
 }
