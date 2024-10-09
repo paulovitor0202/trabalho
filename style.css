@@ -54,6 +54,12 @@ font-size: 1vw;
 backface-visibility: hidden;
 }
 
+.cartao__conteudo p {
+ margin-top: 1rem;
+ padding: 2rem;
+margin-top: 4rem;
+}
+
 .cartao__conteudo__pergunta{
 color: var(--text-color);
 font-weight: 500;
@@ -66,7 +72,14 @@ transform: rotateY(180deg);
 
 .cartao__conteudo__pergunta,
 .cartao__conteudo__reposta {
-    backface-visibility: hidden;
+ backface-visibility: hidden;
+ position: absolute;
+ width: 100%;
+ height: 100%;
+}
+
+.cartao__conteudo__reposta{
+    transform: rotateY(180deg);
 }
 
 
